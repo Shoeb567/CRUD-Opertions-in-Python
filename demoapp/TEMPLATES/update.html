@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<center><h2>Update Studnet Details</h2></center>
+<br>
+<center>
+	<form action='/updateData/?id={{Data.id}}' method="POST">{% csrf_token %}
+		<input type="hidden" value="{{Data.id}}">
+<table border=1>
+	<tr>
+		<td>Update Student Name:</td>
+		<td><input type="text" name="name" value='{{Data.name}}'></td>
+	</tr>
+	<tr>
+		<td>Update Student Email:</td>
+		<td><input type="text" name="email" value='{{Data.email}}'></td>
+	</tr>
+	<tr>
+		<td>Update Student Number:</td>
+		<td><input type="text" name="number" value='{{Data.number}}'></td>
+	</tr>
+	<tr>
+		<td colspan="2"><input type="submit" value="Update Student"></td>
+	</tr>
+</table>
+</form>
+</center>
+</body>
+</html>

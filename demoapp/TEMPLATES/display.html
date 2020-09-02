@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h2><center>Display Studnet Details</center></h2>
+<center>
+<table border=1>
+	<tr>
+		<td>Student Id</td>
+		<td>Student Name</td>
+		<td>Student Email</td>
+		<td>Student Number</td>
+		<td>Delete Student</td>
+		<td>Update Student</td>
+	</tr>
+	{% for i in Data %}
+	<tr>
+		<td>{{i.id}}</td>
+		<td>{{i.name}}</td>
+		<td>{{i.email}}</td>
+		<td>{{i.number}}</td>
+		<td><a href='/deleteView/?id={{i.id}}'>Delete</a></td>
+		<td><a href='/updateView/?id={{i.id}}'>Update</td>
+	</tr>
+	{% endfor %}
+</table>
+<center><h2><a href='/insert/'>Add Studnet Details</a></h2></center>
+</center>
+</body>
+</html>
